@@ -1,13 +1,4 @@
----
-title: 'Trusting, in CICS Explorer'
-description: >-
-  Security — and whether we trust the services we’re communicating with — are
-  important to avoid man-in-the-middle attacks when we’re…
-date: '2022-09-21T17:29:00.133Z'
-categories: []
-keywords: []
-slug: /@dave.nice/trusting-in-cics-explorer-338ef5a27d2c
----
+# Trusting, in CICS Explorer
 
 Security — and whether we trust the services we’re communicating with — are important to avoid man-in-the-middle attacks when we’re transferring information.
 
