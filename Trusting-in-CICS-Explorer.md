@@ -13,9 +13,11 @@ Security — and whether we trust the services we’re communicating with 
 
 This article walks through the mechanisms for managing TLS trust in CICS Explorer. It’ll be relevant if you get an error similar to this when making a connection:
 
+```
 javax.net.ssl.SSLHandshakeException: com.ibm.jsse2.util.h: PKIX path building failed: java.security.cert.CertPathBuilderException: PKIXCertPathBuilderImpl could not build a valid CertPath.; internal cause is:
 
 java.security.cert.CertPathValidatorException: The certificate issued by … is not trusted
+```
 
 This error is CICS Explorer telling you that it does not have enough information to trust the server that you’re connecting to.
 
@@ -81,8 +83,10 @@ Unlike making CICS and z/OS connections, for issues around loading connections a
 
 **4.** import the root and intermediate certificate, like this:
 
+```
 keytool -importcert -alias mycaroot -keystore <path\_to>/jre/lib/security/cacerts -storepass changeit -file carootcert.der  
 keytool -importcert -alias mycaint -keystore <path\_to>/jre/lib/security/cacerts -storepass changeit -file caintermediatecert.der
+```
 
 Notice that we’ve specified an alias which needs to be unique within the keystore.
 
