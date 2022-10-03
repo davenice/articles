@@ -75,8 +75,8 @@ Unlike making CICS and z/OS connections, for issues around loading connections a
 **4.** import the root and intermediate certificate, like this:
 
 ```
-keytool -importcert -alias mycaroot -keystore <path\_to>/jre/lib/security/cacerts -storepass changeit -file carootcert.der  
-keytool -importcert -alias mycaint -keystore <path\_to>/jre/lib/security/cacerts -storepass changeit -file caintermediatecert.der
+keytool -importcert -trustcacerts -alias mycaroot -keystore <path\_to>/jre/lib/security/cacerts -storepass changeit -file carootcert.der  
+keytool -importcert -trustcacerts -alias mycaint -keystore <path\_to>/jre/lib/security/cacerts -storepass changeit -file caintermediatecert.der
 ```
 
 Notice that we’ve specified an alias which needs to be unique within the keystore.
